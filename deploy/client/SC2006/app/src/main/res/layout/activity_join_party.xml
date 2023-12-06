@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:keyboard="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/loginParent"
+    tools:context="com.project.sc2006.JoinPartyActivity">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="12">
+
+        <LinearLayout
+            style="@style/parent"
+            android:background="@drawable/login_shape_bk"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                style="@style/parent"
+                android:background="@drawable/ic_login_bk"
+                android:contentDescription="@string/login_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+
+    <TextView
+        style="@style/headerText"
+        android:layout_gravity="center"
+        android:text="Enter Party Pin"
+        android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/pin"
+    android:layout_below="@id/top"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginHorizontal="30dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        style="@style/parent"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/rounded_rectangle_filled_svgrepo_com"
+            style="@style/parent"
+            android:id="@+id/party_code_1"
+            android:text="1"/>
+
+        <TextView
+            android:id="@+id/party_code_1_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/party_code_1"
+            android:layout_alignTop="@id/party_code_1"
+            android:layout_alignRight="@id/party_code_1"
+            android:layout_alignBottom="@id/party_code_1"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/parent"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/rounded_rectangle_filled_svgrepo_com"
+            style="@style/parent"
+            android:id="@+id/party_code_2" />
+
+        <TextView
+            android:id="@+id/party_code_2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/party_code_2"
+            android:layout_alignTop="@id/party_code_2"
+            android:layout_alignRight="@id/party_code_2"
+            android:layout_alignBottom="@id/party_code_2"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/parent"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/rounded_rectangle_filled_svgrepo_com"
+            style="@style/parent"
+            android:id="@+id/party_code_3" />
+
+        <TextView
+            android:id="@+id/party_code_3_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/party_code_3"
+            android:layout_alignTop="@id/party_code_3"
+            android:layout_alignRight="@id/party_code_3"
+            android:layout_alignBottom="@id/party_code_3"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/parent"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/rounded_rectangle_filled_svgrepo_com"
+            style="@style/parent"
+            android:id="@+id/party_code_4" />
+
+        <TextView
+            android:id="@+id/party_code_4_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/party_code_4"
+            android:layout_alignTop="@id/party_code_4"
+            android:layout_alignRight="@id/party_code_4"
+            android:layout_alignBottom="@id/party_code_4"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/numpad"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/loginCard"
+        android:layout_below="@id/pin"
+        app:cardCornerRadius="@dimen/loginCardRadius"
+        android:elevation="5dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/whiteCardColor">
+
+        <LinearLayout
+            style="@style/linearParent"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin">
+
+            <com.davidmiguel.numberkeyboard.NumberKeyboard
+                android:id="@+id/numberKeyboard"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:numberkeyboard_numberKeyBackground="@drawable/numkey"
+                app:numberkeyboard_rightAuxBtnIcon="@drawable/backspace"
+                keyboard:numberkeyboard_keyboardType="custom" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_below="@id/numpad"
+        style="@style/parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/parent"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor"
+            android:text="Use QR Code Instead"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/scanQRButton"
+            style="@style/loginButton"
+            android:text="Scan QR"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/join_party_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/white" />
+</RelativeLayout>

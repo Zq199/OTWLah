@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp">
+
+    <TextView
+        style="@style/headerText"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:ellipsize="end"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:text="Leave in"
+        android:id="@+id/slider_leave_in"
+        android:textColor="@color/black_semi_transparent"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_button"
+        android:layout_height="60dp"
+        android:layout_width="150dp"
+        android:layout_alignParentRight="true"
+        android:onClick="returnToDestinationSelection"
+        app:cornerRadius="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="true"
+        android:text="Cancel"
+        app:backgroundTint="@color/quantum_googred"
+        app:iconSize="@dimen/fab_icon_size"
+        app:icon="@drawable/close"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconTint="@color/whiteCardColor" />
+
+    <TextView
+        style="@style/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slider_leave_in"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="20dp"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textSize="25dp"
+        android:text="1hr 32min"
+        android:id="@+id/slider_time"
+        android:textColor="@color/black_semi_transparent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/direction_card_travel_mode"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/slider_time"
+        app:cardCornerRadius="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="40dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/list_directions_solo"
+            android:layout_height="wrap_content">
+        </ListView>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

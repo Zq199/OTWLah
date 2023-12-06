@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp">
+    <TextView
+        android:paddingTop="5dp"
+        style="@style/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:ellipsize="end"
+        android:paddingHorizontal="10dp"
+        android:maxLines="1"
+        android:textSize="20dp"
+        android:gravity="start"
+        android:id="@+id/slider_location_name_txt"
+        android:textColor="@color/black_semi_transparent"/>
+    <TextView
+        android:paddingTop="4dp"
+        style="@style/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:textAlignment="gravity"
+        android:ellipsize="end"
+        android:paddingHorizontal="10dp"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:textSize="15dp"
+        android:gravity="start"
+        android:id="@+id/slider_location_address_txt"
+        android:layout_below="@id/slider_location_name_txt"
+        android:textColor="@color/black_semi_transparent"/>
+    <Button
+        android:id="@+id/slider_set_destination"
+        style="@style/loginButton"
+        android:text="Use this location"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/slider_location_address_txt"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

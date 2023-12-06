@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        sothree:umanoFadeColor="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:id="@+id/slidingUp"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoOverlay="true"
+        sothree:umanoShadowHeight="0dp"
+        tools:context=".MainActivity">
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:fab="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".MainActivity" />
+            </RelativeLayout>
+
+            <com.mancj.materialsearchbar.MaterialSearchBar
+                style="@style/MaterialSearchBarLight"
+                android:animateLayoutChanges="true"
+                android:padding="16dp"
+                app:mt_speechMode="false"
+                app:mt_placeholder="Search..."
+                app:mt_hint="Search..."
+                app:mt_maxSuggestionsCount="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchBar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/arrival_time_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="5dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="2dp">
+                    <TextView
+                        android:id="@+id/arrive_by_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Arrive by"
+                        android:layout_gravity="center"
+                        android:textStyle="normal"
+                        android:textSize="17sp"/>
+                    <TextView
+                        android:id="@+id/arrival_time_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="10:30"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/precise_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/searchBar"
+                android:layout_alignRight="@id/searchBar"
+                android:layout_marginRight="10dp"
+                app:fab_icon="@drawable/user_location"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"
+                fab:fab_title="Join Party"
+                fab:fab_size="mini"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/create_party"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/precise_location"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:onClick="openCreateParty"
+                app:fab_icon="@drawable/create_party"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"
+                fab:fab_title="Join Party"
+                fab:fab_size="mini"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/check_weather_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/create_party"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:onClick="openDisplayWeather"
+                app:fab_icon="@drawable/weather"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"
+                fab:fab_title="Check Weather"
+                fab:fab_size="mini"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/open_fab_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonSize="normal"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_expandDirection="up"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp">
+
+
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/join_party_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_icon="@drawable/join_party"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_title="Join Party"
+                    fab:fab_size="mini"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/settings_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_icon="@drawable/settings"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="Settings"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/party_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_icon="@drawable/share"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="History"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/slider_max_height"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/drawable_round_background">
+            <View
+                android:id="@+id/handle"
+                android:layout_width="75dp"
+                android:layout_height="3dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sliding_up_panel_handle"/>
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_below="@id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include
+                    layout="@layout/layout_set_destination"
+                    android:id="@+id/layout_set_destination"/>
+                <include
+                    layout="@layout/layout_set_arrival_time"
+                    android:id="@+id/layout_set_arrival_time"/>
+                <include
+                    layout="@layout/layout_travel_mode"
+                    android:id="@+id/layout_travel_mode"/>
+                <include
+                    layout="@layout/activity_party"
+                    android:id="@+id/activity_party"/>
+            </ViewFlipper>
+
+
+        </RelativeLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:minWidth="50dp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:id="@+id/party_pic"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="3">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/party_line2"
+                android:padding="4dp"
+                android:textSize="18sp"
+                android:text="PARTY DESTINATION"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/party_line1"
+                android:textSize="14sp"
+                android:text="PARTY DATE AND TIME"
+                android:padding="4dp"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

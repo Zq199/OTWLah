@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.project.sc2006'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.project.sc2006"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'androidx.test:monitor:1.6.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.10.0"))
+
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    implementation 'com.github.davidmigloz:number-keyboard:3.1.0'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.github.androidmads:QRGenerator:1.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
+    implementation("com.github.woxingxiao:SlidingUpPanelLayout:1.1.2")
+
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.libraries.places:places:3.2.0'
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    implementation "com.google.maps.android:android-maps-utils:0.5+"
+
+    implementation("io.github.g00fy2.quickie:quickie-bundled:1.8.0")
+
+
+
+//    // below is support for login page
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation "androidx.constraintlayout:constraintlayout:2.2.0-alpha13"
+//    implementation "androidx.cardview:cardview:1.0.0"
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:design:28.0.0'
+//    androidTestImplementation 'junit:junit:4.13.2'
+
+}
